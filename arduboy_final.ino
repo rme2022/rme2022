@@ -192,8 +192,8 @@ void Right(){
 
 void setup(void) {
   //set up gyro here
-    Wire.begin();
-    Serial.begin(9600);
+  Wire.begin();
+  Serial.begin(9600);
   Wire.begin();
   
   byte status = mpu.begin();
@@ -279,9 +279,8 @@ void loop() {
    
     draw();
     arduboy.display();
-    for(int i = 1; i<1000; i++)
+    for(int i = 1; i<500; i++)
     {
-      i++;
       mpu.update();
     }
     
